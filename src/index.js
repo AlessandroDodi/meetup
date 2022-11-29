@@ -1,7 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { Route, Routes } from 'react-router-dom'
+import AllMeetupsPage from './pages/AllMeetup'
+import FavoritesPage from './pages/Favorites'
 
-import './index.css';
-import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+export function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<AllMeetupsPage />} />
+      <Route path="/books" element={<FavoritesPage />} />
+    </Routes>
+  )
+}
