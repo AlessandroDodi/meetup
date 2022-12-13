@@ -1,36 +1,20 @@
 import React from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
+import MainNavigation from './components/MainNavigation'
 import AllMeetupsPage from './pages/AllMeetup'
 import FavoritesPage from './pages/Favorites'
+import NewMeetupPage from './pages/NewMeetup'
 
 function App() {
   const navigate = useNavigate()
 
   return (
     <div>
-      <a
-        type="button"
-        href="/"
-        onClick={(e) => {
-          e.preventDefault()
-          navigate('/')
-        }}
-      >
-        home
-      </a>
-      <a
-        type="button"
-        href="/favorites"
-        onClick={(e) => {
-          e.preventDefault()
-          navigate('/favorites')
-        }}
-      >
-        fav
-      </a>
+      <MainNavigation />
       <Routes>
         <Route path="/" element={<AllMeetupsPage />}></Route>
         <Route path="/favorites" element={<FavoritesPage />}></Route>
+        <Route path="/new-meetup" element={<NewMeetupPage />}></Route>
       </Routes>
     </div>
   )
