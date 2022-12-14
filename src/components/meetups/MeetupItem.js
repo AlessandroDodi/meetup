@@ -14,7 +14,7 @@ export default function MeetupItem(props) {
         id: props.id,
         title: props.title,
         description: props.description,
-        url: props.url,
+        image: props.image,
         address: props.address,
       })
     }
